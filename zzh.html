@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // 假设你的出生日期为 YYYY-MM-DD 格式，请替换以下变量值  
+  const birthDateString = "2004-07-26";  
+  
+  // 将字符串转换为 Date 对象  
+  const birthDate = new Date(birthDateString.replace(/-/g, '/'));  
+  const currentDate = new Date();  
+    
+  // 计算毫秒数差值  
+  const timeDifference = currentDate - birthDate;  
+    
+  // 转换为天数和小时数  
+  const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));  
+  const hoursDifference = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));  
+    
+  // 打印结果  
+  console.log(`从出生日期到现在已经过去了 ${daysDifference} 天`);  
+  console.log(`从出生日期到现在已经过去了 ${hoursDifference} 小时`);  
+    
+  // 或者使用 alert 弹出窗口显示结果  
+  alert(`从出生日期到现在已经过去了 ${daysDifference} 天, ${hoursDifference} 小时`);
+</script>
+<body>
+    
+</body>
+</html>
